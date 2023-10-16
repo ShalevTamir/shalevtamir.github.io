@@ -1,0 +1,258 @@
+html{
+    font-size:16px;
+}
+
+body{
+    margin:0;
+}
+
+/* ====== Header ====== */
+
+header {
+    display: grid;
+    grid-template-columns: min-content 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    box-sizing: content-box;
+    width: 100%;
+    position: fixed;
+    height: 4rem;
+    align-items: center;
+    padding: 0.5rem;
+    z-index: 1;
+    background-color: rgb(48 48 48);
+}
+
+header img{
+    width:auto;
+    height: 100%;
+}
+
+header span{
+    text-shadow:-3px 3px 8px black;
+}
+
+header span#name {
+    margin-left: 6%;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 4.5rem;
+    font-style: italic;
+    color: white;
+    width: 287px;
+    text-align: center;
+}
+
+header span#phone{
+    grid-column-start: 4;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 4.5rem;
+    color: white;
+    justify-self: end;
+    margin-right: 3%;
+    width:500px;
+}
+
+/* ====== Main ====== */
+main {
+    margin-top: 4.5rem;
+    background-image: url('../images/main-background.jpg');
+    background-size: 100% auto;
+    width: 100%;
+    height: 41vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    display: inline-grid;
+    grid-template-columns: 1fr 12fr 6fr 1fr;
+}
+
+main #text-container{
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: -3px 3px 8px black;
+    color: white;
+}
+
+main #text-container span {
+    text-align: center;
+    font-size: 4.5rem;
+    color: white;
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+}
+
+main #text-container ul {
+    z-index: 0;
+    margin: 3% 0;
+    direction: rtl;
+}
+
+main #text-container ul li {
+    font-size: 3rem;
+    margin: 2% 0;
+    
+}
+
+main #text-container ul li bold{
+    color:red;
+    font-weight: bold;
+}
+
+main img{
+    justify-self: center;
+    z-index: 0;
+    border-radius: 20px 40px;
+    border: 10px solid white;
+    filter: drop-shadow(0 0 0.75rem white);
+}
+
+main::before {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    content: "";
+    background-color: #0000009c;
+    width: 100%;
+    height: 41vw;
+    margin-top: 4.5rem;
+}
+
+
+/* ====== Services ====== */
+
+section#Services {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    background-color: #212121;
+}
+.service {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 3%;
+    align-items:center;
+}
+
+.service img {
+    width: 50%;
+    display: block;
+}
+
+.service span {
+    font-size: 2.5rem;
+    margin-top: 3%;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    color: #fefefe;
+}
+
+.img-container#websites{
+    background-image: url('../images/websites.jpg');
+}
+
+
+.img-container#computer-science{
+    background-image: url('../images/apps.jpg');
+}
+
+
+.img-container#english{
+    background-image: url('../images/minecraft.jpg');
+}
+
+.img-container {
+    width: 26vw;
+    height: 21vw;
+    border-radius: 19px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#employees #disclaimer{
+    
+        display: block;
+        color: white;
+    
+}
+
+
+@media only screen and (max-width:1500px){
+    main #text-container span{
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width:900px){
+    main{
+        height:45vh;
+        background-size:cover;
+    }
+    main::before{
+        height:45vh;
+    }
+    .img-container{
+        width:20rem;
+        height:16rem;
+    }
+  
+}
+
+@media only screen and (max-width:800px){
+    header ul{
+        display:none;   
+    }
+}
+
+@media only screen and (max-width:900px){
+    header{
+        grid-template-columns: 2fr 1fr 3fr;
+    }
+    header span#phone{
+        width: auto;
+        grid-column-start: 3;
+        font-size: 7vw;
+        margin-right: 5%;
+    }
+    header span#name{
+        font-size:7vw;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width:1330px){
+   
+    main #text-container ul li{
+        font-size: 3.5vw;
+    }
+    main img{
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    main #text-container span{
+        font-size: 5.5vw;
+    }
+    main #text-container ul li{
+        font-size: 4.4vw;
+    }
+    main img{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:380px){
+    main #text-container ul li{
+        font-size: 5.4vw;
+    }
+}
+
+
